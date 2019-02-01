@@ -7,8 +7,16 @@ Vue.filter('text-length', function(value) {
 });
 
 Vue.mixin({
-    created() {
-        console.log('Global Mixin - Created Hook');
+    data(){
+        return{
+            word2:'',
+        }
+    },
+    computed:{
+        wordLen(){
+            var textLen=this.word2.length;
+            return this.word2+"("+textLen+")";
+        },
     }
 });
 

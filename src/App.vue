@@ -21,15 +21,20 @@
                 <p>Name:{{name}}</p>
                 <p>Reversed Name: {{reverse_name}}</p>
 
-                <!-- Exercise 4 -->
+                <!-- Exercise 4 --><hr>
                 <!-- Share the Computed Property rebuilding Exercise 2 via a Mixin -->
+                <input v-model="word2">
+                <p>Lenght of the word: {{wordLen}}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    //import {CountLen} from "./CountLength.js";
+
     export default {
+       // mixins:[CountLen],
         data(){
             return{
                 name:'Aman',
